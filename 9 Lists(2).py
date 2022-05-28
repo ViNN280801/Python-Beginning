@@ -66,3 +66,39 @@ print('List with odd values: ')
 print(str(odd) + '\n')
 print('List with even values: ')
 print(str(even) + '\n')
+
+# Zeroing out all declared lists
+odd.clear()
+even.clear()
+myList.clear()
+
+print('Copying all elements from one list to another list using copy() method: ')
+myList = [str(5), 1, int(93.7), ['elem_3', 'nice', 67], 0, 4,
+          float(1), 5, [4.1534, 5.78, float(1), float(0)]]
+print('Count of elements in list = ' + str(len(myList)) + '\n')
+myListCopy = myList.copy()
+print(str(myListCopy) + '\n')
+
+# Clear myListCopy
+myListCopy.clear()
+print('Copying all elements using "src = dest[::]": ')
+myListCopy = myList[::]
+print(str(myListCopy) + '\n')
+
+# Clear myListCopy
+myListCopy.clear()
+print(
+    'Copying certain elements (from _begin_ to _end_ with _step_ step) using src = dest[_begin_:_end_:_step_]: ')
+myListCopy = myList[5:9:1]
+print(str(myListCopy) + '\n')
+
+myList.clear()
+myListCopy.clear()
+
+print('Separating list using "src = dest[_begin_::_step_]"')
+myList = list(range(1, 26))
+print('List before separating: ' + str(myList) + '\n')
+
+# Getting odd elements in list
+myList = myList[0::2]
+print('List arter separating: ' + str(myList) + '\n')
