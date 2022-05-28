@@ -48,4 +48,4 @@ myTuple += myTupleToAdd
 # Printing result, concatenated, tuple
 print('Result tuple: ' + str(myTuple) + '\n')
 
-# Conclusion: we can adding tuple to tuple but modify is restricted
+# Conclusion: we can adding tuple to tuple but modifying is restricted
