@@ -91,7 +91,7 @@ print('\'var\' = ' + var)
 def original():
     var = 'original()\'s scope'
     def nested():
-        # With using 'nonlocal' keyword we can modify 'var' from 88th line
+        # With using 'nonlocal' keyword we can modify 'var' from 92th line
         nonlocal var
         var = 'nested()\'s scope'
         print('Value from "nested()" function: ' + str(var))
