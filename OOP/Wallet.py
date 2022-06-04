@@ -12,7 +12,8 @@ class Wallet:
         ''' Assigning default variables '''
         # __money is a private variable
         if currency not in ('USD', 'EUR', 'RUB'):
-            raise ValueError('Currency error. Specified currency is unavalible')
+            raise ValueError(
+                'Currency error. Specified currency is unavalible')
         self.__money = 0.00
         self.currency = currency
         self.name = name
@@ -29,7 +30,7 @@ class Wallet:
         else:
             self.__money -= money_to_spend
         return money_to_spend
-    
+
     def transfer_money(self, dest_wallet, money_to_transfer):
         ''' Transfers money from one wallet to another '''
         # Checkig if money to transfer is bigger value than money which we have on a balance
@@ -40,7 +41,7 @@ class Wallet:
             self.__money -= money_to_transfer
             # Adding to another wallet
             dest_wallet.__money += money_to_transfer
-    
+
     def balance(self):
         ''' Returns how much money is in the wallet '''
         return self.__money
